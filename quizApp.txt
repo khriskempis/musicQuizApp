@@ -1,0 +1,123 @@
+// QUIZ APP
+
+user stories:
+
+- greeted by a start button to start quiz
+  after selected it will dissapear and the question will take its 
+  place on the viewport. 
+
+- then the first question is available with 4 multiple choice answers
+  should be a counter to tell the user what number they are on and how many are left
+  needs to have 4 buttons with different answers of which they can only select one. 
+  // OPTIONAL when user clicks img, the correct note can be heard 
+
+- when they select an answer and submit they will be told immedietaly if they
+  got the answer correct or not
+
+  text at the bottom will let user know CORRECT or TRY AGAIN, 
+  
+  - if they got it correct, the words CORRECT! will be highlighted in green 
+  - if they got it wrong, they have the option of continuing or trying again
+    with a button that appears after they have submitted an answer. 
+
+- when next is clicked the previous question will be 
+  hidden/opacity/moved away and a new question will appear. 
+
+
+- at the end of the test they will be given their results. A percentage of 
+  how they did along with the questions they answered wrong. 
+  as well as an option to start the quiz over. 
+
+
+// HTML ELEMENTS 
+
+// START
+
+  <div class="container center">
+    <form class="quiz-start js-quiz-start">
+      <header>
+        <h1>Music Note Quiz</h1>
+      </header>
+      <p>Test your Sight-Reading Ability!</p>
+      <button class="js-start">Get Started!</button>
+    </form>
+  </div>
+  
+//QUESTION
+
+   <form class="question js-question">
+    <div class="container center">
+      <section role="score"class="track-info">
+        <h3 class="question-display">Question: <span>3</span>/10</h3>
+        <h3 class="score-display"> Score: <span class="js-score">2</span></h3>
+      </section>
+      <h4 class="js-answer-display hidden">C</h4>
+      <section role="note image" class="note-img">
+        <img src="https://d2rhekw5qr4gcj.cloudfront.net/uploads/things/images/49459025_150123_0720_05.jpeg">
+      </section>
+      <section role="multiple choice answers" class="row buttons center">
+        <button class="answer col-6 js-answer">A</button>
+        <button class="answer col-6 js-answer">B</button>
+        <button class="answer col-6 js-answer">C</button>
+        <button class="answer col-6 js-answer">D</button>
+      </section>
+      </div>
+        <section role="feedback" class="js-feedback hidden center">
+          <h2>Correct!</h2>
+          <p class="js-feedback-answer"></p>
+          <button class="next js-next">Next</button>
+        </section>
+      </form>
+
+
+// RESULT 
+  <form class="quiz-end js-quiz-end">
+    <div class="container center">
+      <header >
+        <h1 class="js-result">RESULT</h1>
+      </header>
+      <h2><span class="js-questions-answered">${quizDATA.score}</span> / 10 Correct</h2>
+      <button class="js-restart restart">Play Again</button>
+    </div>
+  </form>
+
+
+
+
+
+
+// TREBLE CLEF LINKS TO MUSIC NOTES 
+
+- C4
+  https://www3.northern.edu/wieland/theory/clefs/big_treb.gif
+
+- D
+  https://d2rhekw5qr4gcj.cloudfront.net/uploads/things/images/49459025_150123_0720_05.jpeg
+
+- E
+  http://www.clker.com/cliparts/k/r/O/E/i/7/treble-clef-e-hi.png
+
+- F 
+  https://classconnection.s3.amazonaws.com/751/flashcards/1680751/jpg/note-treble-f4-143549BF94E30383573.jpg
+
+- G
+  http://clipart-library.com/images/gce5MpKMi.jpg
+
+- A
+  https://o.quizlet.com/i/O1HrN1aXr6PFToas3yggSw_m.jpg
+
+- B
+  https://www.quia.com/files/quia/users/jrush10/TrebleClefLinesSpaces/B.jpg
+
+- C5
+  http://classconnection.s3.amazonaws.com/112/flashcards/1028112/jpg/treble_clef_c_space1324551206761.jpg
+
+- D
+  https://www.quia.com/files/quia/users/jrush10/TrebleClefLinesSpaces/D.jpg
+
+- E
+  https://www.quia.com/files/quia/users/jrush10/TrebleClefLinesSpaces/E.jpg
+
+- F
+  https://www.quia.com/files/quia/users/jrush10/TrebleClefLinesSpaces/F_1.jpg
+
