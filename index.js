@@ -50,15 +50,15 @@ function createQuestionObject(dataItem){
 			question:	`
 	<form class="question js-question">
     <div class="container center">
-      <section role="score" class="track-info">
+      <section role="contentinfo" class="track-info">
         <h3 class="question-display">Question: <span>${quizDATA.questionNum}</span>/10</h3>
         <h3 class="score-display"> Score: <span class="js-score">${quizDATA.score}</span></h3>
       </section>
       <h4 class="hidden js-answer-display">${dataItem.name}</h4>
-      <section role="note image" class="note-img">
+      <section class="note-img">
         <img src="${dataItem.src}"" alt="${dataItem.alt}">
       </section>
-      <section role="multiple choice answers" class="row buttons center">`,
+      <section role="contentinfo" class="row buttons center">`,
 
    answer: generateCorrectAnswer()
 	};
@@ -143,7 +143,7 @@ function generateQuestionAndAnswers(){
 	questionString += questionObject.question + buttonsString +
 		` </section>
 		  </div>
-		    <section role="feedback" class="js-feedback hidden center">
+		    <section role="note" class="js-feedback hidden center">
 		      <h2>Correct!</h2>
 		      <p class="js-feedback-answer"></p>
 		      <button class="next js-next">Next</button>
